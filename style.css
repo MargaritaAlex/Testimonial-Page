@@ -1,0 +1,187 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Sora', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 8rem 8rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.container {
+  display: flex;
+  max-width: 1920px;
+  width: 100%;
+  gap: 5rem;
+  align-items: center;
+}
+
+.reviewers {
+  flex: 1;
+  max-width: 920px;
+}
+
+.reviewers img {
+  width: 32px;
+  margin-bottom: 1rem;
+}
+
+.reviewers h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.reviewers p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.reviewers ul {
+  list-style: none;
+}
+
+.reviewers li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: #222;
+}
+
+.reviewers li img {
+  width: 20px;
+  margin-right: 0.5rem;
+}
+
+.card-grid {
+  display: grid;
+  gap: 2rem;
+  position: relative;
+}
+
+.google-card {
+  background: white;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+  width: 320px;
+  justify-self: start;
+  transform: none;
+}
+
+.meta-card {
+  background: white;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+  width: 320px;
+  justify-self: start;
+  transform: none;
+
+
+}
+
+.Rating {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.Rating img {
+  height: 20px;
+}
+
+.username {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.review-text {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+@media (max-width: 1024px) {
+  body {
+    flex-direction: column;
+    padding: 4rem 2rem;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4rem;
+  }
+
+  .reviewers {
+    max-width: 100%;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    width: 100%;
+  }
+
+  .google-card,
+  .meta-card {
+    width: 100%;
+    max-width: 320px;
+    justify-self: center;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: left;
+    gap: 3rem;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    justify-items: left;
+  }
+
+  .google-card,
+  .meta-card {
+    grid-column: auto;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .reviewers {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .reviewers ul {
+    padding-left: 0;
+  }
+
+  .reviewers li {
+    justify-content: left;
+  }
+}
